@@ -1,0 +1,61 @@
+# Node modules
+node_modules/
+.pnpm/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+jspm_packages/
+
+# Build output directories
+dist/
+build/
+out/
+.bundle/
+
+# Plasmo specific cache and build files
+.plasmo/
+.plasmo/output/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# dotenv environment variable files
+.env
+.env.*.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# MacOS Finder directory attributes
+.AppleDouble
+.LSOverride
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows thumbnail cache files
+*.stackdump
+
+# Linux file system
+*.fuse_hidden*
+*.un~
+.nfs*
+
+# Typescript specific
+*.tsbuildinfo
+
+# Coverage directory used by tools like istanbul
+coverage/
