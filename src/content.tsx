@@ -35,7 +35,15 @@ const PlasmoOverlay = () => {
           if (inputBox) {
             inputBox.addEventListener("focus", handleFocus);
             inputBox.addEventListener("blur", handleBlur);
-            observer.disconnect(); // Stop observing once the element is found
+          } else {
+            // Remove event listeners if the input element is no longer present
+            const existingInputBox = document.querySelector(
+              ".msg-form__contenteditable"
+            );
+            if (existingInputBox) {
+              existingInputBox.removeEventListener("focus", handleFocus);
+              existingInputBox.removeEventListener("blur", handleBlur);
+            }
           }
         }
       });
@@ -45,11 +53,6 @@ const PlasmoOverlay = () => {
 
     return () => {
       observer.disconnect();
-      const inputBox = document.querySelector(".msg-form__contenteditable");
-      if (inputBox) {
-        inputBox.removeEventListener("focus", handleFocus);
-        inputBox.removeEventListener("blur", handleBlur);
-      }
     };
   }, []);
 
