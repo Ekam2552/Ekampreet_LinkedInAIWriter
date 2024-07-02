@@ -24,17 +24,12 @@ const PlasmoOverlay = () => {
       setFocused(true);
     };
 
-    const handleBlur = () => {
-      setFocused(false);
-    };
-
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.type === "childList") {
           const inputBox = document.querySelector(".msg-form__contenteditable");
           if (inputBox) {
             inputBox.addEventListener("focus", handleFocus);
-            inputBox.addEventListener("blur", handleBlur);
           } else {
             // Remove event listeners if the input element is no longer present
             const existingInputBox = document.querySelector(
@@ -42,7 +37,6 @@ const PlasmoOverlay = () => {
             );
             if (existingInputBox) {
               existingInputBox.removeEventListener("focus", handleFocus);
-              existingInputBox.removeEventListener("blur", handleBlur);
             }
           }
         }
