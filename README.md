@@ -37,3 +37,12 @@ npm run build
 ```
 
 This should create a production bundle for your extension, ready to be zipped and published to the stores.
+
+
+## Completed Project Video by Ekampreet Singh
+
+
+https://github.com/Ekam2552/Ekampreet_LinkedInAIWriter/assets/55293372/763c9867-289b-4743-b2cb-5edf29d136bb
+
+
+
